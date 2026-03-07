@@ -83,6 +83,7 @@ const App = () => {
       <div className="header">
         <h1>🐕 Veni Vici - Discover Dogs!</h1>
         <h3>Click the button to see a random dog</h3>
+        <h3>Sharnica Jeudy Z23582376</h3>
       </div>
       
       <button onClick={fetchDog} className="discover-btn">
