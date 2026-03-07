@@ -5,6 +5,7 @@ const App = () => {
 
   const [currentDog, setCurrentDog] = useState(null);
   const [bannedAttributes, setBannedAttributes] = useState([]);
+  const [history, setHistory] = useState([]);
 
   const addToBanList = (type, value) => {
     const banItem = { type, value };
@@ -61,6 +62,7 @@ const App = () => {
             subBreed: subBreed
           };
           setCurrentDog(dogData);
+          setHistory([dogData, ...history]);
           break;
         }
         
@@ -116,6 +118,23 @@ const App = () => {
                 onClick={() => removeFromBanList(item.type, item.value)}
               >
                 {item.value} ❌
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div className="history">
+        <h2>📜 History</h2>
+        {history.length === 0 ? (
+          <p>No dogs discovered yet!</p>
+        ) : (
+          <div className="history-grid">
+            {history.map((dog, index) => (
+              <div key={index} className="history-item">
+                <img src={dog.image} alt={dog.breed} />
+                <p><strong>{dog.breed}</strong></p>
+                {dog.subBreed && <p className="sub-breed">{dog.subBreed}</p>}
               </div>
             ))}
           </div>
