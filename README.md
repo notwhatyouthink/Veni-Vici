@@ -37,9 +37,6 @@ The following **optional** features are implemented:
   - A dedicated section of the application displays all the previous images/attributes seen before
   - Each time the API call button is clicked, the history updates with the newest API result
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you added to improve the site's functionality!
 
 ## Video Walkthrough
 
@@ -54,9 +51,6 @@ GIF created with ...  [ScreenToGif]
 [ScreenToGif](https://www.screentogif.com/) for Windows
 [peek](https://github.com/phw/peek) for Linux. -->
 
-## Notes
-
-What I learned is making multiple sequential API calls with fetch and async/await in a while loop, parsing and extracting data from API response URLs using string methods (split, includes), implementing array filtering with the .some() method to check if attributes match banned items, managing complex state interactions where one state variable (bannedAttributes) affects API fetching logic, using the spread operator to add items to arrays while maintaining immutability, implementing two-way filtering (adding and removing from ban list), handling edge cases where all API results might be filtered out by the ban list, building a session-based history feature that accumulates data across multiple API calls, working with nested object structures for organizing related data (type and value pairs in ban items), and creating dynamic, clickable UI elements that trigger state changes. This project strengthened my understanding of how to work with external APIs that don't require authentication, implement sophisticated filtering logic, manage user interactions that affect future data fetching, and build features that maintain state history across user sessions.
 
 ## License
 
